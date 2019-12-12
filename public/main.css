@@ -1,0 +1,20 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.search {
+  grid-area: login;
+  display: flex;
+  place-self: center;
+}
+
+.container {
+  display: grid;
+  align-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: ". . ."
+                       ". image ."
+                       ". login ."
+}

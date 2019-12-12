@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-      <script src="socket.io/socket.io.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <p>Search for an image: </p>
-    <div class="imgContainer">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="socket.io/socket.io.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="search">
+      <form action="/search" method="get">
+        <input type="text" name="textInput">
+        <button type="submit">search images</button>
+      </form>
     </div>
-    <form action="/search" method="get">
-      <input type="text" name="textInput">
-      <button type="submit">search</button>
-    </form>
-    <script src="js/app.js" charset="utf-8"></script>
-  </body>
+  </div>
+  <script src="js/app.js" charset="utf-8"></script>
+</body>
+
 </html>
