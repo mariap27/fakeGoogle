@@ -1,12 +1,32 @@
 body, html {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+.googleLogo {
+  grid-area: logo;
+  display: flex;
+  place-self: center;
+  visibility: visible;
 }
 
 .search {
-  grid-area: login;
+  grid-area: search;
   display: flex;
   place-self: center;
+  visibility: visible;
+}
+
+.images {
+  margin: 10px auto;
+  display: table;
+  width: 100%;
+}
+
+.outerImgs {
+  margin: 10px;
+  width: 100%;
 }
 
 .container {
@@ -15,6 +35,6 @@ body, html {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: ". . ."
-                       ". image ."
-                       ". login ."
+    ". logo ."
+    ". search ."
 }

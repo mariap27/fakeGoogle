@@ -40,7 +40,7 @@ io.on('connection', socket => {
 function getImages(img) {
   let google = new Scraper.Google({
     keyword: img,
-    limit: 5,
+    limit: 4,
     puppeteer: {
       headless: true
     },
@@ -57,5 +57,6 @@ function getImages(img) {
   //    ignoreDefaultArgs: ['--disable-extensions'],
   //  });
     console.log('results', results);
+    io.emit('images', results);
   })();
 }
